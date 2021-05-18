@@ -10,8 +10,14 @@ function Main() {
 
     const logar = () => {
         navigation.reset({
-            routes: [{ name: 'Cadastro' }]
+            routes: [{ name: 'MainTab' }]
         });
+    }
+
+    const cadastrar = () => {
+        navigation.reset({
+            routes: [{ name: 'Cadastro' }]
+        })
     }
     return(
         <SafeAreaView style={styles.container}>
@@ -33,7 +39,8 @@ function Main() {
                 <TouchableOpacity style={styles.buttonLogin} onPress={ logar }>
                     <Text style={styles.textButton}>Login</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.buttonCadastro}>
+
+                <TouchableOpacity style={styles.buttonCadastro} onPress={ cadastrar }>
                     <Text>Não tem cadastro? Clique aqui!</Text>
                 </TouchableOpacity>
             </View>

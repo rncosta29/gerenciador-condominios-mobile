@@ -3,6 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 import Main from '../screen/Main';
 import Cadastro from '../screen/Cadastro';
+import MainTab from './MainTab';
 
 
 export default function MainStack() {
@@ -16,6 +17,7 @@ export default function MainStack() {
         >
             <Stack.Screen name='Main' component={Main} />
             <Stack.Screen name='Cadastro' component={Cadastro} />
+            <Stack.Screen name='MainTab' component={MainTab} />
         </Stack.Navigator>
     )
 }

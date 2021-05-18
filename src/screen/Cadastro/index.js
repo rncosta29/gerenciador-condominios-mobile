@@ -11,9 +11,16 @@ function Cadastro() {
 
     const cadastrar = () => {
         navigation.reset({
-            routes: [{ name: 'Main' }]
+            routes: [{ name: 'MainTab' }]
         });
     }
+
+    const telaLogin = () => {
+        navigation.reset({
+            routes: [{ name: 'Main' }]
+        })
+    }
+
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.titleView}>
@@ -42,7 +49,8 @@ function Cadastro() {
                 <TouchableOpacity style={styles.buttonLogin} onPress={ cadastrar }>
                     <Text style={styles.textButton}>Cadastrar</Text>
                 </TouchableOpacity>
-                <TouchableOpacity>
+
+                <TouchableOpacity onPress={ telaLogin }>
                     <Text>Já tem cadastro? Clique aqui e faça o Login!</Text>
                 </TouchableOpacity>
             </View>
